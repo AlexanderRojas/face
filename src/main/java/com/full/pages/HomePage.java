@@ -1,14 +1,33 @@
 package com.full.pages;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class HomePage {
+	
+
+	
+	@FindBy(id="email")
+	private static WebElement emailInput;
+
+	@FindBy(id = "pass")
+	private static WebElement passInput;
+
+	@FindBy(id = "u_0_3")
+	private static WebElement submitButton;
 
 	public static void go(WebDriver driver){
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	
 		driver.get("https://www.facebook.com/");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		}
+
+	public static void login(String email, String pass) {
+		emailInput.sendKeys(email);
+		passInput.sendKeys(pass);
+		submitButton.submit();
+
+		
+	}
+
 }
