@@ -5,7 +5,7 @@
     <classes>
       <class name="com.full.tests.HomePageTests">
         <methods>
-          <include name="wikipediaSearch"/>
+          <include name="home"/>
         </methods>
       </class> <!-- com.full.tests.HomePageTests -->
     </classes>

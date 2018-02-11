@@ -13,7 +13,7 @@ public class HomePageTests {
 	WebDriver driver;
 	
 	@Test
-	public void wikipediaSearch(){
+	public void home(){
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
 	    firefoxOptions.setCapability("marionette", true);
 	    driver = new FirefoxDriver(firefoxOptions);
@@ -21,9 +21,6 @@ public class HomePageTests {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		HomePage.go(driver);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		HomePage.search("Cleopatra", "español");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.quit();
+		//driver.quit();
 	}
-
 }
