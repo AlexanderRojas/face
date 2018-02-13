@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 //import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
+//import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.PageFactory;
 import com.full.pages.HomePage;
 
@@ -14,9 +14,12 @@ public class HomePageTests {
 
 	@Test
 	public void home(){
-		FirefoxOptions firefoxOptions = new FirefoxOptions();
-	    firefoxOptions.setCapability("marionette", true);
-	    driver = new FirefoxDriver(firefoxOptions);
+		
+		//FirefoxOptions firefoxOptions = new FirefoxOptions(); 
+	    //firefoxOptions.setCapability("marionette", true);
+		//Anora, no se por qué, No funcionó con estas dos lineas. Tocó quitarlas,
+	    
+	    driver = new FirefoxDriver();
 		PageFactory.initElements(driver, HomePage.class);
 		HomePage.go(driver);
 		//driver.quit();
